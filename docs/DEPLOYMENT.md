@@ -16,6 +16,12 @@ npm run build -- --base=/Start-Map-Studio/
 
 Preview the built output using `npm run preview` and open the base path. Verify the catalogs, fonts, PIN lookup, and credits links before publishing. Do not move only `index.html`; its adjacent assets are required.
 
+## GitHub Pages
+
+The workflow at `.github/workflows/deploy-pages.yml` validates and deploys the site after every push to `main`. It derives the Vite base path from the repository name, uploads `web/dist` as a Pages artifact, and deploys through the `github-pages` environment.
+
+Enable it once under **Settings > Pages** by setting **Source** to **GitHub Actions**. The expected URL is `https://ameydeshpande30.github.io/Start-Map-Studio/`. A repository rename changes the workflow's build path automatically, but the source and published URL references in the documentation must be updated separately.
+
 ## Source Link
 
 The default GitHub URL is `https://github.com/ameydeshpande30/Start-Map-Studio`. `VITE_GITHUB_SOURCE_URL` can override it at build time. Invalid URLs disable the source action. Environment values beginning with `VITE_` are visible to clients.

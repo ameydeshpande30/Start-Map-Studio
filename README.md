@@ -48,19 +48,19 @@ Timezone offsets are explicit, not inferred from arbitrary coordinates. PIN look
 
 ## Deploy
 
+Pushes to `main` deploy through [the GitHub Pages workflow](.github/workflows/deploy-pages.yml). In the repository's GitHub settings, select **Pages**, then set **Source** to **GitHub Actions**. The published site is:
+
+https://ameydeshpande30.github.io/Start-Map-Studio/
+
+For a local production build at the same repository path:
+
 ```sh
 cd web
 npm ci
-npm run build
-```
-
-Serve `web/dist` on any static host over HTTPS. Keep the bundled `data`, `fonts`, `licenses`, and `credits.html` files with the build. For GitHub Pages at this repository path:
-
-```sh
 npm run build -- --base=/Start-Map-Studio/
 ```
 
-Upload the generated `dist` contents to the site's publishing target. See [deployment notes](docs/DEPLOYMENT.md) for validation and hosting constraints.
+Serve `web/dist` on any static host over HTTPS. Keep the bundled `data`, `fonts`, `licenses`, and `credits.html` files with the build. See [deployment notes](docs/DEPLOYMENT.md) for validation and hosting constraints.
 
 ## Privacy And Accuracy
 
