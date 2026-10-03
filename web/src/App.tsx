@@ -35,7 +35,7 @@ const sourceUrl = /^https:\/\/github\.com\/[^/]+\/[^/]+\/?$/.test(configuredSour
   : undefined
 
 function App() {
-  const [mobileView, setMobileView] = useState<'controls' | 'preview'>('controls')
+  const [mobileView, setMobileView] = useState<'controls' | 'preview'>('preview')
   const [draft, setDraft] = useState<StarmapSettings>(createCurrentSettings)
   const [renderSettings, setRenderSettings] = useState<StarmapSettings>(draft)
   const [catalogs, setCatalogs] = useState<Catalogs | null>(null)
