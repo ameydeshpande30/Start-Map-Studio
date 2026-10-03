@@ -1,0 +1,12 @@
+.venv/
+starmap_data/
+reference/
+*.py
+web/node_modules/
+web/dist/
+web/package-lock.json
+web/public/data/*.json
+web/public/fonts/
+web/public/licenses/
+web/test-results/
+web/playwright-report/
